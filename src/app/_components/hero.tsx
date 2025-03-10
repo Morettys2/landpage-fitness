@@ -1,11 +1,10 @@
 import { WhatsappLogo } from '@phosphor-icons/react/dist/ssr';
 import Image from 'next/image';
 import dogImg from '../../../public/hero-dog.webp';
-import catImg from '../../../public/cat-hero.png';
 
 export function Hero() {
     return (
-        <section className="bg-[#e84c3d] text-white relative overflow-hidden">
+        <section className="bg-gray-900 text-white relative overflow-hidden">
             <div>
                 <Image
                     src={dogImg}
@@ -31,7 +30,7 @@ export function Hero() {
                         <div className="flex">
                             <a
                                 href="#"
-                                className="bg-green-500 px-5 py-2 rounded-md font-semibold flex items-center justify-center gap-2"
+                                className="bg-[#00A859] hover:bg-[#008F4F] px-5 py-2 rounded-md font-semibold flex items-center justify-center gap-2"
                             >
                                 <WhatsappLogo className='w-5 h-5' />
                                 Contato via WhatsApp
