@@ -39,7 +39,6 @@ export function Testimonials() {
         <h2 className="text-4xl font-bold text-white mb-12">O que nossos alunos dizem</h2>
 
         <div className="relative max-w-3xl mx-auto">
-          {/* Carrossel */}
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {testimonials.map((item, index) => (
@@ -59,7 +58,6 @@ export function Testimonials() {
             </div>
           </div>
 
-          {/* Botões de navegação */}
           <button
             className="bg-white p-3 rounded-full shadow-lg absolute left-0 -translate-y-1/2 top-1/2 transform hover:bg-gray-100 transition"
             onClick={() => emblaApi?.scrollPrev()}
@@ -78,3 +76,4 @@ export function Testimonials() {
     </section>
   );
 }
+
