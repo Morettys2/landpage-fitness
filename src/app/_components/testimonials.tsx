@@ -43,11 +43,13 @@ export function Testimonials() {
             <div className="flex">
               {testimonials.map((item, index) => (
                 <div key={index} className="flex-[0_0_100%] px-4">
-                  <article className="bg-white text-gray-800 rounded-2xl shadow-lg p-8 flex flex-col items-center space-y-4 transform transition-all hover:scale-105">
+                  <article className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center space-y-4 transform transition-all hover:scale-105 hover:rounded-2xl">
                     <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-green-500">
-                      <Image src={item.image} alt={item.author} width={96} height={96} className="object-cover" />
+                      <Image src={item.image} alt={item.author} width={96} height={96} className="object-cover rounded-full" />
                     </div>
-                    <p className="text-gray-700 text-lg italic">"{item.content}"</p>
+                    <blockquote className="text-gray-700 text-lg italic">
+                      <p>{item.content}</p>
+                    </blockquote>
                     <div className="text-center">
                       <p className="font-bold text-gray-900">{item.author}</p>
                       <p className="text-sm text-gray-500">{item.role}</p>

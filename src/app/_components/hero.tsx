@@ -5,7 +5,7 @@ import dogImg from '../../../public/hero-dog.webp';
 export function Hero() {
     return (
         <section className="bg-gray-900 text-white relative overflow-hidden">
-            <div>
+            <div className="absolute inset-0">
                 <Image
                     src={dogImg}
                     alt="Dog"
@@ -17,7 +17,7 @@ export function Hero() {
                 <div className='absolute inset-0 bg-black opacity-40 md:hidden'></div>
             </div>
 
-            <div className='container mx-auto pt-16 pb-16 md:pb-0 px-4 relative'>
+            <div className='container mx-auto pt-16 pb-16 md:pb-0 px-4 relative z-10'>
                 <article className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
                     <div className='space-y-6'>
                         <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl leading-10">
@@ -30,7 +30,7 @@ export function Hero() {
                         <div className="flex">
                             <a
                                 href="#"
-                                className="bg-[#00A859] hover:bg-[#008F4F] px-5 py-2 rounded-md font-semibold flex items-center justify-center gap-2"
+                                className="bg-[#00A859] hover:bg-[#008F4F] px-5 py-2 rounded-md font-semibold flex items-center justify-center gap-2 shadow-lg"
                             >
                                 <WhatsappLogo className='w-5 h-5' />
                                 Contato via WhatsApp

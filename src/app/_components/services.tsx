@@ -26,6 +26,16 @@ const services = [
     linkText: "Olá, vi no site sobre Corrida de Endurance e gostaria de mais informações.",
   },
   {
+    title: "Corrida de Velocidade",
+    description:
+      "Treinos intensivos focados em aumentar a velocidade e a técnica de corrida.",
+    type: "corrida",
+    duration: "45min",
+    price: "R$100",
+    icon: <Timer />,
+    linkText: "Olá, vi no site sobre Corrida de Velocidade e gostaria de mais informações.",
+  },
+  {
     title: "Ciclismo de Longa Distância",
     description:
       "Treinos voltados para melhorar sua performance em provas de ciclismo de resistência.",
@@ -36,6 +46,26 @@ const services = [
     linkText: "Olá, vi no site sobre Ciclismo de Longa Distância e gostaria de mais informações.",
   },
   {
+    title: "Ciclismo de Montanha",
+    description:
+      "Aprimore suas habilidades em terrenos montanhosos com treinos focados em técnica e resistência.",
+    type: "ciclismo",
+    duration: "1h30",
+    price: "R$160",
+    icon: <Bicycle />,
+    linkText: "Olá, vi no site sobre Ciclismo de Montanha e gostaria de mais informações.",
+  },
+  {
+    title: "Ciclismo Urbano",
+    description:
+      "Desenvolva técnicas para o ciclismo eficiente e seguro nas áreas urbanas.",
+    type: "ciclismo",
+    duration: "1h",
+    price: "R$140",
+    icon: <Bicycle />,
+    linkText: "Olá, vi no site sobre Ciclismo Urbano e gostaria de mais informações.",
+  },
+  {
     title: "Nutrição para Atletas",
     description:
       "Plano alimentar personalizado para otimizar sua energia e recuperação nos treinos e provas.",
@@ -44,6 +74,26 @@ const services = [
     price: "R$100",
     icon: <Apple />,
     linkText: "Olá, vi no site sobre Nutrição para Atletas e gostaria de mais informações.",
+  },
+  {
+    title: "Nutrição para Ganho de Massa",
+    description:
+      "Dieta específica para aumentar a massa muscular de forma saudável.",
+    type: "nutrição",
+    duration: "45min",
+    price: "R$90",
+    icon: <Apple />,
+    linkText: "Olá, vi no site sobre Nutrição para Ganho de Massa e gostaria de mais informações.",
+  },
+  {
+    title: "Nutrição para Perda de Peso",
+    description:
+      "Programa alimentar focado em perda de peso com equilíbrio nutricional.",
+    type: "nutrição",
+    duration: "1h",
+    price: "R$110",
+    icon: <Apple />,
+    linkText: "Olá, vi no site sobre Nutrição para Perda de Peso e gostaria de mais informações.",
   },
 ];
 
@@ -94,8 +144,15 @@ export function Services() {
               {services
                 .filter((item) => item.type === filter || filter === "")
                 .map((item, index) => (
-                  <div key={index} className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33%] px-4">
-                    <article className="bg-white text-gray-800 rounded-2xl shadow-lg p-6 flex flex-col transition-transform duration-300 hover:scale-105">
+                  <div
+                    key={index}
+                    className={`flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33%] px-4 ${
+                      services.filter((item) => item.type === filter || filter === "").length <= 2
+                        ? "md:flex-[0_0_100%]"
+                        : ""
+                    }`}
+                  >
+                    <article className="bg-white text-gray-800 rounded-3xl shadow-lg p-6 flex flex-col transition-transform duration-300 hover:scale-105">
                       <div className="flex items-center gap-3">
                         <span className="text-4xl text-green-600">{item.icon}</span>
                         <div>
@@ -107,6 +164,7 @@ export function Services() {
                         <div className="flex items-center text-sm text-gray-700">
                           <Clock className="w-4 h-4" />
                           <span className="ml-2">{item.duration}</span>
+                          <span className="ml-4 font-bold text-green-600">{item.price}</span>
                         </div>
                         <a
                           target="_blank"
