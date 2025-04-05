@@ -4,6 +4,8 @@ import useEmblaCarousel from "embla-carousel-react";
 import { Apple, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 
+
+
 const services = [
   {
     title: "Treinamento para Maratonas",
@@ -106,6 +108,7 @@ export function Services() {
   };
 
   return (
+    
     <section className="bg-gray-100 py-16">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Nossos Serviços</h2>

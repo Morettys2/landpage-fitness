@@ -1,5 +1,5 @@
 import Image from "next/image";
-import about1Img from '../../../public/about-1.png';
+import about1Img from "@/assets/mateusmmd__1726413014_3457725439179975616_7278567533.webp";
 import { Check, MessageCircle } from "lucide-react";
 import { WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
 
