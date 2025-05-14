@@ -1,4 +1,4 @@
-# 🏋️‍♂️ Fitness Courses Landing Page
+# 🏋️‍♂️ Fitness Courses
 
 Este projeto é uma **Landing Page** voltada para promover cursos na área fitness, com foco em **maratonas**, **corrida**, **endurance** e **bike**. Desenvolvida para fins de estudo, a página foi criada utilizando as seguintes tecnologias:
 
